@@ -1,0 +1,258 @@
+body {
+  background-image: url(https://static.vecteezy.com/system/resources/previews/003/537/419/original/icon-background-ice-cream-flat-design-free-vector.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+p {
+  font-family: "Roboto", "Font Awesome 5 Free";
+  color: #919191;
+}
+
+.materialContainer {
+  width: 100%;
+  max-width: 580px;
+  position: relative;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+.materialContainer img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+.materialContainer .box {
+  position: relative;
+  width: 390px;
+  height: 670px;
+  top: 100px;
+  float: left;
+  padding: 5px 5px 35px 15px;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.materialContainer .box .title {
+  width: 100%;
+  float: left;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #004891;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.materialContainer .box #menu {
+  width: 380px;
+  position: relative;
+  left: 5px;
+  transition: 0.5s;
+}
+.materialContainer .box #adicionar, .materialContainer .box #adicionar2, .materialContainer .box #adicionar3, .materialContainer .box #remover, .materialContainer .box #update, .materialContainer .box #update2, .materialContainer .box #update3 {
+  width: 380px;
+  position: relative;
+  top: -355px;
+  left: 450px;
+  transition: 0.5s;
+}
+.materialContainer .box #adicionar input, .materialContainer .box #adicionar2 input, .materialContainer .box #adicionar3 input, .materialContainer .box #remover input, .materialContainer .box #update input, .materialContainer .box #update2 input, .materialContainer .box #update3 input {
+  font-family: "Roboto", "Font Awesome 5 Free";
+  width: 95%;
+  padding: 10px 5px;
+  margin: 5px 0;
+  border: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+.materialContainer .box #adicionar select, .materialContainer .box #adicionar2 select, .materialContainer .box #adicionar3 select, .materialContainer .box #remover select, .materialContainer .box #update select, .materialContainer .box #update2 select, .materialContainer .box #update3 select {
+  padding: 7px 40px 7px 12px;
+  width: 95%;
+  border: 1px solid #E8EAED;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+.materialContainer .box #adicionar2 {
+  top: -650px;
+}
+.materialContainer .box #adicionar3 {
+  top: -1020px;
+}
+.materialContainer .box #remover {
+  top: -900px;
+}
+.materialContainer .box #update {
+  top: -1070px;
+}
+.materialContainer .box #update2 {
+  top: -1400px;
+}
+.materialContainer .box #vizualizar {
+  position: relative;
+  height: 450px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 995px;
+  word-wrap: break-word;
+  background-color: white;
+  transition: 0.5s;
+  overflow: auto;
+  display: block;
+}
+.materialContainer .box #vizualizar td, .materialContainer .box #vizualizar th {
+  text-align: center;
+  padding: 8px;
+}
+.materialContainer .box #vizualizar td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+  width: 150px;
+}
+.materialContainer .box #vizualizar th {
+  color: #000000;
+  background: rgba(153, 150, 150, 0.231372549);
+  font-size: 15px;
+}
+.materialContainer .box tr:hover {
+  background-color: #cccccc;
+}
+.materialContainer .box #vizualizar tr:nth-child(even) {
+  background: #F8F8F8;
+}
+.materialContainer .box #vizualizar tr:nth-child(even):hover {
+  background-color: #cccccc;
+}
+.materialContainer .box .button {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+  margin-left: auto;
+  z-index: 2;
+}
+.materialContainer .box .button.login {
+  width: 70%;
+}
+.materialContainer .box .button.login button {
+  width: 100%;
+  left: -50px;
+  line-height: 64px;
+  background-color: transparent;
+  border: 3px solid rgba(0, 0, 0, 0.35);
+  font-weight: 900;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.55);
+  border-radius: 7px;
+  margin-left: auto;
+}
+.materialContainer .box .button.login button:hover {
+  color: #004891;
+  border-color: #004891;
+}
+.materialContainer .box .button button {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.materialContainer .box .button {
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+  margin-left: auto;
+  z-index: 2;
+}
+.materialContainer .box .button.login2 button {
+  width: 100%;
+  line-height: 64px;
+  background-color: transparent;
+  border: 3px solid rgba(0, 0, 0, 0.35);
+  font-weight: 900;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.55);
+  border-radius: 7px;
+  font-family: "Arial", "Font Awesome 5 Free";
+}
+.materialContainer .box .button.login2 button:hover {
+  color: #004891;
+  border-color: #004891;
+}
+.materialContainer .box .button button {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.materialContainer .box .button-menu {
+  background-color: #004891;
+  border: solid;
+  border-radius: 7px;
+  border-color: #004891;
+  color: white;
+  padding: 5px 5px 5px 5px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 40px;
+}
+.materialContainer .box .button-menu:nth-child(odd) {
+  background-color: #004891;
+  border-color: #004891;
+}
+.materialContainer .box .button-menu:hover {
+  background-color: #ffffff;
+  color: #004891;
+  border: solid;
+  border-radius: 5px;
+}
+.materialContainer .box .button-menu:hover:nth-child(odd) {
+  color: #004891;
+}
+.materialContainer .box #overlay {
+  position: absolute;
+  display: none;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2;
+  cursor: pointer;
+}
+.materialContainer .box #overlay #block_overlay {
+  width: 300px;
+  height: 300px;
+  margin-left: 55px;
+  margin-top: 120px;
+  background-color: white;
+  border: 1px;
+  border-radius: 15px;
+}
+.materialContainer .box #overlay #block_overlay #text_overlay {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+.materialContainer .box #overlay #block_overlay #check {
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=style.css.map */

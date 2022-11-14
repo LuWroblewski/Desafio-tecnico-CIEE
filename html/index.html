@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio tecnico</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" type="text/css" href="../style/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./imgs/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../imgs/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../imgs/favicon-16x16.png">
+  <script defer src="../button.js"></script>
+  <script defer src="../index.js"></script>
+
+</head>
+
+<body>
+
+  <div class="materialContainer">
+    <div class="box" id="box">
+      <div id="overlay" >
+        <div id="block_overlay">
+        <p class="text_overlay"> <img src="../imgs/check.gif" alt="check" id="check" top="5000px" ></p>
+        <p class="text_overlay" id="text_ov"></p>
+        <p class="text_overlay"> Uma copia foi enviada ao seu email :)</p>
+    </div>
+    </div>
+
+      <button class="button-menu" id="button-menu"><i class="fa">&#xf015;</i></button> <img src="../imgs/logo.png" width="287" height="120">
+      <div class="title" >Bem vindo(a)</div>
+      <div class="title" id="title">Por favor escolha uma opção.</div>
+
+      <!--- Form menu--->
+
+      <form id="menu">
+        <div class="button login">
+          <button id="buttonAdicionar"><i class="fa">&#xf304;</i> Adicionar cliente</button>
+        </div>
+        <div class="button login">
+          <button id="buttonRemover"><i class="fa">&#xf304;</i> Remover cliente &nbsp;</button>
+        </div>
+        <div class="button login">
+          <button id="buttonAtualizar"><i class="fa">&#xf304;</i> Atualizar cliente</button>
+        </div>
+        <div class="button login">
+          <button id="buttonVizualizar" ><i class="fa">&#xf304;</i> Vizualizar tabela</button>
+        </div>
+      </form>
+
+      <!--- Form de adicionar cliente--->
+      <form action="" method="post" id="adicionar">
+        <p><input placeholder="&#xf007; Nome completo:" type="text" id="nome" name="nome" required></p>
+        <p> <input placeholder="&#xf095; telefone: (55-11-123456789)" type="text" id="telefone" name="telefone"pattern="[0-9]{2}-[0-9]{2}-[0-9]{9}" required></p>
+        <p> <input placeholder="&#xf0e0; email:" type="email" id="email" name="email" required></p>
+        <div class="button login2">
+          <button id="button0">&#xf060; Voltar</button>
+          &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+          <button id="button1">Proximo &#xf061;
+        </div>
+      </form>
+      <form action="" method="post" id="adicionar2">
+        <p><select id="saborSorvete" name="saborSorvete" onchange = calcula_preço()></p>
+        <option value="" selected disabled hidden >Sabor do sorvete</option>
+        <option value="baunilha">Baunilha R$ 1,00</option>
+        <option value="chocolate">Chocolate R$ 2,00</option>
+        <option value="misto">Misto R$ 2,50</option>
+        </select>
+
+        <p><select id="adicionais" name="adicionais" onchange = calcula_preço()></p>
+          <option value="" selected disabled hidden >adicionais</option>
+          <option value="caldaChocolate">Calda de chocolate + R$ 1,00</option>
+          <option value="tubinhoWafer">Tubinho de wafer + R$ 1,50</option>
+          <option value="semAdicional">Sem adicional R$ 0,00</option>
+          </select>
+        <p style="color: red; font-weight: bold; font-size: 20px; text-align: center;"> Total: </p>
+        <p style="color: red; font-weight: bold; font-size: 20px; text-align: center;" onchange class="total" id="total" >R$: 0,00</p>
+
+        <div class="button login2">
+          <button id="button2">&#xf060; Voltar </button>
+          &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+          <button type="submit" id="button3">Enviar &#xf00c; </button>
+        </div>
+      </form>
+
+      <!--- Form de remover cliente--->
+
+      <form action="" method="post" id="remover">
+        <p> <input placeholder="&#xf0e7; id do cliente" type="text" id="idpedidos" name="idpedidos"></p>
+        <div class="button login2">
+          <button id="button4">&#xf060; Voltar </button>
+          &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+          <button type="submit" id="button5">Enviar &#xf00c; </button>
+        </div>
+      </form>
+
+      <!---Form update cliente --->
+
+      <form action="" method="post" id="update">
+        <p><input placeholder="&#xf007; Id do cliente que será atualizado" type="text" id="idpedidosUp"name="idpedidosUp"></p>
+        <p><input placeholder="&#xf007; Nome completo:" type="text" id="nomeUp" name="nomeUp"></p>
+        <p> <input placeholder="&#xf095; telefone: (55-11-123456789)" type="text" id="telefoneUp" name="telefoneUp"
+            pattern="[0-9]{2}-[0-9]{2}-[0-9]{9}"></p>
+        <p> <input placeholder="&#xf0e0; email:" type="text" id="emailUp" name="emailUp"></p>
+        <div class="button login2">
+          <button id="button6">&#xf060; Voltar</button>
+          &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+          <button id="button7">Proximo &#xf061;
+        </div>
+      </form>
+     
+
+      <form action="" method="post" id="update2">
+        <p><select id="saborSorveteUp" name="saborSorveteUp" onchange = calcula_preço()></p>
+        <option value="" selected disabled hidden >Sabor do sorvete</option>
+        <option value="baunilha">Baunilha R$ 1,00</option>
+        <option value="chocolate">Chocolate R$ 2,00</option>
+        <option value="misto">Misto R$ 2,50</option>
+        </select>
+
+        <p><select id="adicionaisUp" name="adicionaisUp" onchange = calcula_preço()></p>
+          <option value="" selected disabled hidden >adicionais</option>
+          <option value="caldaChocolate">Calda de chocolate + R$ 1,00</option>
+          <option value="tubinhoWafer">Tubinho de wafer + R$ 1,50</option>
+          <option value="semAdicional">Sem adicional R$ 0,00</option>
+          </select>
+        <p style="color: red; font-weight: bold; font-size: 20px; text-align: center;"> Total: </p>
+        <p style="color: red; font-weight: bold; font-size: 20px; text-align: center;" onchange class="totalUp" id="totalUp" >R$: 0,00</p>
+
+        <div class="button login2">
+          <button id="button8">&#xf060; Voltar </button>
+          &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+          <button type="submit" id="button9">Enviar &#xf00c; </button>
+        </div>
+      </form>
+
+      <table id="vizualizar">
+        <tr>
+
+          <th>idclientes</th>
+          <th>Nome</th>
+          <th>telefone</th>
+          <th>email</th>
+          <th>Sabor</th>
+          <th>adicionais</th>
+          <th>total</th>
+        </tr>
+
+      </table>
+    </div>
+</body>
+
+</html>
